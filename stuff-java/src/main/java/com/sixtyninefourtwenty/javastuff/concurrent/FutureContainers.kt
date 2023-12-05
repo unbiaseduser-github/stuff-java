@@ -24,7 +24,7 @@ open class FutureContainer {
 
     fun numberOfActiveFutures() = futures.count { !it.isDone }
 
-    fun close() = futures.forEach { it.cancel(true) }
+    fun close() = futures.forEach { it.cancel(false) }
 
 }
 
